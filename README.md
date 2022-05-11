@@ -22,4 +22,5 @@ repos:
 
 Validates all `kustomization.yaml` files render to a valid kubernetes manifest.
 
-
+Requires:
+- kubectl

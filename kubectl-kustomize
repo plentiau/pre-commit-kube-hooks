@@ -5,8 +5,6 @@ if ! hash kubectl 2>/dev/null; then
   exit 1
 fi
 
-dirsToCheck=$(find . -type f -name "kustomization.yaml" -exec dirname "{}" \; |sort -u)
-
 while IFS= read -r dir; do
   kubectl kustomize "$dir" 1>/dev/null
   ret=$?
@@ -14,4 +12,4 @@ while IFS= read -r dir; do
     echo "Kustomize failed on $dir"
     exit 1
   fi
-done <<< "$dirsToCheck"
+done <<< "$(find . -type f -name "kustomization.yaml" -exec dirname "{}" \;)"

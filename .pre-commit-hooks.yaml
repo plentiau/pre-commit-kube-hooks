@@ -1,6 +1,6 @@
 - id: kubectl-kustomize
   name: Build Kustomize manifests
   description: Builds a kustomize.yaml file into it's resulting manifests.
-  entry: kubectl-kustomize.sh
+  entry: kubectl-kustomize
   language: script
   pass_filenames: false

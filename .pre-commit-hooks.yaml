@@ -3,5 +3,4 @@
   description: Builds a kustomize.yaml file into it's resulting manifests.
   entry: kubectl-kustomize.sh
   language: script
-  file: kustomize.yaml
-  types: []
+  pass_filenames: false
